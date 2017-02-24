@@ -2,7 +2,7 @@
 # Requirement: jq (eg. yum install -y jq)
 
 RESPONSE=$(curl "http://${GOCD_DOMAIN_NAME:=gocd.dev.twleansw.com}:8153/go/api/backups" \
-      -u '${GOCD_USER}:${GOCD_PASSWORD}' \
+      -u "${GOCD_USER}:${GOCD_PASSWORD}" \
       -H 'Confirm: true' \
       -H 'Accept: application/vnd.go.cd.v1+json' \
       -X POST)
